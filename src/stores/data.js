@@ -9,6 +9,7 @@ export const useDataStore = defineStore('data', () => {
   const currentFilter = ref('')
 
   function getData() {
+    currentFilter.value = ''
     axios.get(' https://stockradars.co/assignment/data.php').then((res) => {
       originalDataList.value = [...res.data]
       dataList.value = [...res.data]

@@ -34,7 +34,10 @@ const store = useDataStore()
             <span class="market">{{ store.currentData.N_shortname || ' - ' }}</span>
           </p>
           <p>
-            มูลค่า : <span class="market">{{ store.currentData.marketcap || ' - ' }}</span>
+            มูลค่า :
+            <span class="market"
+              >{{ store.formatNumber(store.currentData.marketcap) || ' - ' }} บาท</span
+            >
           </p>
           <p style="font-weight: 500">
             ชื่อบริษัท TH :
